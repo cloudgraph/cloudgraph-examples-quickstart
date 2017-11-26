@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PlasmaSDOProfile="http:///schemas/PlasmaSDOProfile/_Hd_cELa3EeeGwOelpq04nA/8" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/PlasmaSDOProfile/_Hd_cELa3EeeGwOelpq04nA/8 pathmap://PLASMA_PROFILES/PlasmaSDO.profile_v1_2.uml#_HeBRQLa3EeeGwOelpq04nA">
+  <uml:Model xmi:id="_CcCnYMcZEeeKwMn1SWG0QA" name="HumanResources">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iHZwcMcaEeeKwMn1SWG0QA" name="Person">
+      <generalization xmi:type="uml:Generalization" xmi:id="_s0SUcMcbEeeKwMn1SWG0QA" general="_oAUPIMcbEeeKwMn1SWG0QA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pGEEUMcdEeeKwMn1SWG0QA" name="firstName">
+        <type xmi:type="uml:DataType" href="pathmap://PLASMA_LIBRARIES/PlasmaSDODataTypes_v1_2.uml#plasma-sdo-profile-datatypes-String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_46dKIMcdEeeKwMn1SWG0QA" name="lastName">
+        <type xmi:type="uml:DataType" href="pathmap://PLASMA_LIBRARIES/PlasmaSDODataTypes_v1_2.uml#plasma-sdo-profile-datatypes-String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BOdAoMceEeeKwMn1SWG0QA" name="age">
+        <type xmi:type="uml:DataType" href="pathmap://PLASMA_LIBRARIES/PlasmaSDODataTypes_v1_2.uml#plasma-sdo-profile-datatypes-Int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_E65dMMceEeeKwMn1SWG0QA" name="dateOfBirth">
+        <type xmi:type="uml:DataType" href="pathmap://PLASMA_LIBRARIES/PlasmaSDODataTypes_v1_2.uml#plasma-sdo-profile-datatypes-Date"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_z7Q20cceEeeKwMn1SWG0QA" name="employer" type="_DkekMMcbEeeKwMn1SWG0QA" association="_z7Q20MceEeeKwMn1SWG0QA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z7Q20sceEeeKwMn1SWG0QA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z7Q208ceEeeKwMn1SWG0QA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_DkekMMcbEeeKwMn1SWG0QA" name="Organization">
+      <generalization xmi:type="uml:Generalization" xmi:id="_tb68MMcbEeeKwMn1SWG0QA" general="_oAUPIMcbEeeKwMn1SWG0QA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_z7QPwMceEeeKwMn1SWG0QA" name="employee" type="_iHZwcMcaEeeKwMn1SWG0QA" association="_z7Q20MceEeeKwMn1SWG0QA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z7QPwcceEeeKwMn1SWG0QA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z7QPwsceEeeKwMn1SWG0QA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aogHMMcgEeeKwMn1SWG0QA" name="name">
+        <type xmi:type="uml:DataType" href="pathmap://PLASMA_LIBRARIES/PlasmaSDODataTypes_v1_2.uml#plasma-sdo-profile-datatypes-String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_d-9FoMcgEeeKwMn1SWG0QA" name="category">
+        <type xmi:type="uml:DataType" href="pathmap://PLASMA_LIBRARIES/PlasmaSDODataTypes_v1_2.uml#plasma-sdo-profile-datatypes-String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hSO0QMcgEeeKwMn1SWG0QA" name="child" type="_DkekMMcbEeeKwMn1SWG0QA" association="_hSX-MMcgEeeKwMn1SWG0QA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hSO0QccgEeeKwMn1SWG0QA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hSO0QscgEeeKwMn1SWG0QA" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hSX-MccgEeeKwMn1SWG0QA" name="parent" type="_DkekMMcbEeeKwMn1SWG0QA" association="_hSX-MMcgEeeKwMn1SWG0QA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hSX-MscgEeeKwMn1SWG0QA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hSX-M8cgEeeKwMn1SWG0QA" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oAUPIMcbEeeKwMn1SWG0QA" name="Party" isAbstract="true">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ljEh4MchEeeKwMn1SWG0QA" name="createdDate">
+        <type xmi:type="uml:DataType" href="pathmap://PLASMA_LIBRARIES/PlasmaSDODataTypes_v1_2.uml#plasma-sdo-profile-datatypes-Date"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_z7Q20MceEeeKwMn1SWG0QA" memberEnd="_z7Q20cceEeeKwMn1SWG0QA _z7QPwMceEeeKwMn1SWG0QA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hSX-MMcgEeeKwMn1SWG0QA" memberEnd="_hSX-MccgEeeKwMn1SWG0QA _hSO0QMcgEeeKwMn1SWG0QA"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_C3p5cMcmEeeKwMn1SWG0QA" name="OrgCat">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_LS6OgMcmEeeKwMn1SWG0QA" name="nonprofit"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MwV10McmEeeKwMn1SWG0QA" name="government"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_O4-9UMcmEeeKwMn1SWG0QA" name="retail"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_QGYkkMcmEeeKwMn1SWG0QA" name="wholesale"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Cg9joMcZEeeKwMn1SWG0QA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Cg9joccZEeeKwMn1SWG0QA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PLASMA_PROFILES/PlasmaSDO.profile_v1_2.uml#_HeBRQLa3EeeGwOelpq04nA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PLASMA_PROFILES/PlasmaSDO.profile_v1_2.uml#_NlmngCJUEeSXvPZh3aumVA"/>
+    </profileApplication>
+  </uml:Model>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_jtdZMMcjEeeKwMn1SWG0QA" base_NamedElement="_iHZwcMcaEeeKwMn1SWG0QA" physicalName="PERSON"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_8lUqoMcjEeeKwMn1SWG0QA" base_NamedElement="_DkekMMcbEeeKwMn1SWG0QA" physicalName="ORG"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_fnfM4MckEeeKwMn1SWG0QA" base_NamedElement="_pGEEUMcdEeeKwMn1SWG0QA" physicalName="FN"/>
+  <PlasmaSDOProfile:SDOKey xmi:id="_fnoW0MckEeeKwMn1SWG0QA" base_Property="_pGEEUMcdEeeKwMn1SWG0QA" type="primary"/>
+  <PlasmaSDOProfile:SDOValueConstraint xmi:id="_fnyH0MckEeeKwMn1SWG0QA" base_Property="_pGEEUMcdEeeKwMn1SWG0QA" maxLength="36"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_av-O4MclEeeKwMn1SWG0QA" base_NamedElement="_E65dMMceEeeKwMn1SWG0QA" physicalName="DOB"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_ToqYgMcmEeeKwMn1SWG0QA" base_NamedElement="_LS6OgMcmEeeKwMn1SWG0QA" physicalName="N"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_VtZQYMcmEeeKwMn1SWG0QA" base_NamedElement="_MwV10McmEeeKwMn1SWG0QA" physicalName="G"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_XuiowMcmEeeKwMn1SWG0QA" base_NamedElement="_O4-9UMcmEeeKwMn1SWG0QA" physicalName="R"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_ZY-KQMcmEeeKwMn1SWG0QA" base_NamedElement="_QGYkkMcmEeeKwMn1SWG0QA" physicalName="W"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_AHaUgMcoEeeKwMn1SWG0QA" base_NamedElement="_aogHMMcgEeeKwMn1SWG0QA" physicalName="NAME"/>
+  <PlasmaSDOProfile:SDOKey xmi:id="_AHjecMcoEeeKwMn1SWG0QA" base_Property="_aogHMMcgEeeKwMn1SWG0QA" type="primary"/>
+  <PlasmaSDOProfile:SDOValueConstraint xmi:id="_AHtPcMcoEeeKwMn1SWG0QA" base_Property="_aogHMMcgEeeKwMn1SWG0QA" maxLength="36"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_ksjFYMcoEeeKwMn1SWG0QA" base_NamedElement="_ljEh4MchEeeKwMn1SWG0QA" physicalName="CRTD_DT"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_kJX08McqEeeKwMn1SWG0QA" base_NamedElement="_CcCnYMcZEeeKwMn1SWG0QA" physicalName="HR"/>
+  <PlasmaSDOProfile:SDONamespace xmi:id="_kJhl8McqEeeKwMn1SWG0QA" base_Package="_CcCnYMcZEeeKwMn1SWG0QA" uri="http://plasma-quickstart/humanresources"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_DNkeEMcxEeeKwMn1SWG0QA" base_NamedElement="_d-9FoMcgEeeKwMn1SWG0QA" physicalName="ORG_CAT"/>
+  <PlasmaSDOProfile:SDOEnumerationConstraint xmi:id="_DNuPEMcxEeeKwMn1SWG0QA" base_Property="_d-9FoMcgEeeKwMn1SWG0QA" value="_C3p5cMcmEeeKwMn1SWG0QA"/>
+  <PlasmaSDOProfile:SDOValueConstraint xmi:id="_DN4AEMcxEeeKwMn1SWG0QA" base_Property="_d-9FoMcgEeeKwMn1SWG0QA" maxLength="1"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_66kNMMfMEeepAcx1qlG0iA" base_NamedElement="_46dKIMcdEeeKwMn1SWG0QA" physicalName="LN"/>
+  <PlasmaSDOProfile:SDOValueConstraint xmi:id="_67A5IMfMEeepAcx1qlG0iA" base_Property="_46dKIMcdEeeKwMn1SWG0QA" maxLength="36"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="__AFREMfMEeepAcx1qlG0iA" base_NamedElement="_BOdAoMceEeeKwMn1SWG0QA" physicalName="AGE"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_It4MEMfNEeepAcx1qlG0iA" base_NamedElement="_z7Q20cceEeeKwMn1SWG0QA" physicalName="EMP"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_eInPUMfNEeepAcx1qlG0iA" base_NamedElement="_z7QPwMceEeeKwMn1SWG0QA" physicalName="EMPLOYEE"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_kxUosMfNEeepAcx1qlG0iA" base_NamedElement="_hSO0QMcgEeeKwMn1SWG0QA" physicalName="CHILD"/>
+  <PlasmaSDOProfile:SDOAlias xmi:id="_m-H3cMfNEeepAcx1qlG0iA" base_NamedElement="_hSX-MccgEeeKwMn1SWG0QA" physicalName="PARENT"/>
+</xmi:XMI>

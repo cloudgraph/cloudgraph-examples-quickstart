@@ -1,0 +1,58 @@
+26 Nov 2017 09:35:44,368 DEBUG [main] cli.SDOTool given destination dir 'java' does not exist
+26 Nov 2017 09:35:44,368 DEBUG [main] cli.SDOTool dest: java
+26 Nov 2017 09:35:44,384 DEBUG [main] runtime.PlasmaRuntime initializing...
+26 Nov 2017 09:35:44,384 DEBUG [main] runtime.PlasmaRuntimeDataBinding loading schema chain...
+26 Nov 2017 09:35:45,009 DEBUG [main] runtime.PlasmaRuntime artifact: (humanresources.uml) http://humanresources.uml - detected as Plasma SDO Profile version (PLASMA_SDO_PROFILE_V_1_2_UML) http:///schemas/PlasmaSDOProfile/_Hd_cELa3EeeGwOelpq04nA/8
+26 Nov 2017 09:35:45,009 DEBUG [main] runtime.PlasmaRuntime loading known UML/XMI artifact, PlasmaSDO.profile_v1_2.uml (http:///schemas/PlasmaSDOProfile/_Hd_cELa3EeeGwOelpq04nA/8)
+26 Nov 2017 09:35:45,009 INFO  [main] fuml.Fuml loading artifact, PlasmaSDO.profile_v1_2.uml
+26 Nov 2017 09:35:45,431 INFO  [main] library.Library initializing...
+26 Nov 2017 09:35:45,925 DEBUG [main] runtime.PlasmaRuntime loading known UML/XMI artifact, PlasmaSDODataTypes_v1_2.uml (http:///schemas/PlasmaSDODataTypes/_Z68-YCG2EeSfsoM4aIlAPw)
+26 Nov 2017 09:35:45,925 INFO  [main] fuml.Fuml loading artifact, PlasmaSDODataTypes_v1_2.uml
+26 Nov 2017 09:35:45,971 DEBUG [main] cli.ProvisioningTool detected stale configuration file 'plasma-config.xml' against time: 0
+26 Nov 2017 09:35:45,971 INFO  [main] fuml.Fuml loading artifact, humanresources.uml
+26 Nov 2017 09:35:46,034 DEBUG [main] provisioning.MetamodelAssembler processing namespace: http://plasma-quickstart/humanresources
+26 Nov 2017 09:35:46,034 DEBUG [main] provisioning.MetamodelAssembler processing type: http://plasma-quickstart/humanresources#Person
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler processing type: http://plasma-quickstart/humanresources#Organization
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler processing type: http://plasma-quickstart/humanresources#Party
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding 1 properties class: http://plasma-quickstart/humanresources#Party
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Party.createdDate
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding 5 properties class: http://plasma-quickstart/humanresources#Person
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.firstName
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.lastName
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.age
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.dateOfBirth
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Person.employer
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding 5 properties class: http://plasma-quickstart/humanresources#Organization
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Organization.employee
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Organization.name
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Organization.category
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Organization.child
+26 Nov 2017 09:35:46,050 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Organization.parent
+26 Nov 2017 09:35:46,065 INFO  [main] provisioning.MetamodelDataBinding loading schema chain...
+26 Nov 2017 09:35:46,175 DEBUG [main] cli.SDOTool wrote merged model file to: C:\dev-cloudgraph-examples-quickstart\cloudgraph-examples-quickstart\cloudgraph-quickstart-mysql-uml\target\generated-sources\java\technical-model.xml
+26 Nov 2017 09:35:46,237 INFO  [main] cli.SDOTool generated 3 interfaces to output to directory: C:\dev-cloudgraph-examples-quickstart\cloudgraph-examples-quickstart\cloudgraph-quickstart-mysql-uml\target\generated-sources\java
+26 Nov 2017 09:35:46,253 INFO  [main] cli.SDOTool generated 3 classes to output to directory: C:\dev-cloudgraph-examples-quickstart\cloudgraph-examples-quickstart\cloudgraph-quickstart-mysql-uml\target\generated-sources\java
+26 Nov 2017 09:35:46,253 INFO  [main] cli.SDOTool generated 1 enumerations to output to directory: C:\dev-cloudgraph-examples-quickstart\cloudgraph-examples-quickstart\cloudgraph-quickstart-mysql-uml\target\generated-sources\java
+26 Nov 2017 09:35:46,253 DEBUG [main] cli.ProvisioningTool detected stale configuration file 'plasma-config.xml' against time: 0
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler processing namespace: http://plasma-quickstart/humanresources
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler processing type: http://plasma-quickstart/humanresources#Person
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler processing type: http://plasma-quickstart/humanresources#Organization
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler processing type: http://plasma-quickstart/humanresources#Party
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding 1 properties class: http://plasma-quickstart/humanresources#Party
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Party.createdDate
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding 5 properties class: http://plasma-quickstart/humanresources#Person
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.firstName
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.lastName
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.age
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Person.dateOfBirth
+26 Nov 2017 09:35:46,253 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Person.employer
+26 Nov 2017 09:35:46,268 DEBUG [main] provisioning.MetamodelAssembler adding 5 properties class: http://plasma-quickstart/humanresources#Organization
+26 Nov 2017 09:35:46,268 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Organization.employee
+26 Nov 2017 09:35:46,268 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Organization.name
+26 Nov 2017 09:35:46,268 DEBUG [main] provisioning.MetamodelAssembler adding data property http://plasma-quickstart/humanresources#Organization.category
+26 Nov 2017 09:35:46,268 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Organization.child
+26 Nov 2017 09:35:46,268 DEBUG [main] provisioning.MetamodelAssembler adding reference property http://plasma-quickstart/humanresources#Organization.parent
+26 Nov 2017 09:35:46,268 INFO  [main] cli.DSLTool generated 3 classes to output to directory: C:\dev-cloudgraph-examples-quickstart\cloudgraph-examples-quickstart\cloudgraph-quickstart-mysql-uml\target\generated-sources\java
+26 Nov 2017 09:35:46,284 INFO  [main] ddl.DDLModelDataBinding loading schema chain...
+26 Nov 2017 09:35:46,315 INFO  [main] cli.RDBTool marshalled DDL model XML to C:\dev-cloudgraph-examples-quickstart\cloudgraph-examples-quickstart\cloudgraph-quickstart-mysql-uml\target\ddl\ddl-model.xml
+26 Nov 2017 09:35:46,331 INFO  [main] cli.RDBTool wrote DDL model to C:\dev-cloudgraph-examples-quickstart\cloudgraph-examples-quickstart\cloudgraph-quickstart-mysql-uml\target\ddl\mysql-create.sql
