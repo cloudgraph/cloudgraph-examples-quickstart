@@ -1,17 +1,16 @@
-![icon](media/5cabe8ecef07e1b4c1f972e2fe29b2c8.png)
-**Plasma**
-========== 
+<sup><img src="media/favicon.jpg" alt="big-icon" width="24" height="24" /></sup>**CloudGraph**
+=============================================================  
 TerraMeta Software, Inc.
 
-**Plasma Quick Start MySql (UML)**
+**CloudGraph Quick Start MySql (UML)**
 ===================================
-PlasmaSDO® and PlasmaQuery® are registered of Trademarks of TerraMeta Software, Inc.
+Cloudgraph<sup>®</sup>, PlasmaSDO<sup>®</sup> and PlasmaQuery<sup>®</sup> are registered of Trademarks of TerraMeta Software, Inc.
 
 **Introduction**
 ================
 
 This step-by-step guide uses Unified Modelling Language (UML) as the only source
-of schema or metadata. It relies on [Plasma Data
+of schema or metadata. It relies on [CloudGraph Data
 Studio](https://github.com/plasma-framework/plasma-data-studio) for creating and
 editing UML models and shows how to add plugins and dependencies to an existing
 Maven project which generates a simple MySql data model with 2 tables which
@@ -27,10 +26,10 @@ assumes the following software install prerequisites.
 See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
 examples which accomplany this guide.
 
-**Plasma Quick Start MySql (UML)**
+**CloudGraph Quick Start MySql (UML)**
 ==================================
 
-**Add Plasma Dependencies**
+**Add CloudGraph Dependencies**
 ---------------------------
 
 Add the following dependency to your existing Maven project to get started.
@@ -49,13 +48,13 @@ Add the following dependency to your existing Maven project to get started.
 From Plasma Data Studio (see prerequisites) create a new UML model and diagram
 into the src/main/resources directory of your existing maven project.
 
-1.  Right click on the resources directory, then to New-\>Other-\>Plasma as
+1.  Right click on the resources directory, then to New-\>Other-\>CloudGraph as
     below.
 
 2.  Save the model (it will have a .di extension, for diagram) in the resources
     dir of the project.
 
-3.  Select Plasma Class Diagram for the diagram type. Then Finish the wizard.
+3.  Select CloudGraph Class Diagram for the diagram type. Then Finish the wizard.
 
 ![](media/9d443af4f9d6e5ee9b87452bd4dc63e9.png)
 
@@ -66,14 +65,14 @@ into the src/main/resources directory of your existing maven project.
 **Edit the UML Model**
 ----------------------
 
-From Plasma Data Studio (see prerequisites) open the Plasma Perspective.
+From Plasma Data Studio (see prerequisites) open the CloudGraph Perspective.
 
 ![](media/431c9b614d28f1904fe42176678b54d9.png)
 
 The new mode can be edited and annotated as any Papyrus model. See
 <https://www.eclipse.org/papyrus/> for detailed documentation on Eclipse
 Papyrus. Plasma Data Studio however has a custom pallete which restricts the
-available UML elements to those applicable to Plasma structural models. Double
+available UML elements to those applicable to CloudGraph structural models. Double
 click or drag 2 class elements to the diagram and name one Person and one
 Organization.
 
@@ -87,7 +86,7 @@ edges to make the Person and Organization classes inherit from Party.
 Next add properties to the Person entity. Before adding properties we need to
 import datatypes to use for the property datatypes. Select the root element of
 the project in the Model Explorer, then select Import-\>Import Registered
-Package. Then select Plasma Data Types and load the package into your model.
+Package. Then select CloudGraph Data Types and load the package into your model.
 
 ![](media/a6aea080f46af5c02891c70bf74f36ca.png)
 
@@ -110,7 +109,7 @@ Resources model such as employer and employee, as below.
 ![](media/3cb7ffbf84ee94bd1371f948f6b08861.png)
 
 Next add 2 properties to the Organization entity name and category, both with
-String datatypes from the Plasma Data Types package. We will enhance the
+String datatypes from the CloudGraph Data Types package. We will enhance the
 category property with an enumeration restriction later. Then add a recursive
 association to the Organization entity as below, with both sides of the
 association owned by the classifier. Note that the Papyres Filters must be used
@@ -136,7 +135,7 @@ complete structural model description. The final model has enough information to
 allow us to generate code and persist the entities we created in one or more
 physical data stores. (*Note that for big-data stores such as HBase the size of
 the physical table is greatly influenced by the size of column names, and the
-logical/physical name isolation provided by Plasma is critical for controlling
+logical/physical name isolation provided by CloudGraph is critical for controlling
 the size of the physical store while maintaining a readable data model and
 generated code*) First select the root package node on the Model Explorer and
 rename the package to HumanResources. Then select the Profile editor section and
@@ -225,7 +224,7 @@ physicalName = “CRTD_DT” similarly as below.
 
 ![](media/821bdf2f70ea88640a38026105d15ca4.png)
 
-**Add Plasma Configuration XML**
+**Add CloudGraph Configuration XML**
 --------------------------------
 
 In the Maven project src/main/resources directory add a file called
@@ -288,11 +287,11 @@ code-generation and other configuration elements, as below.
 ```
 
 
-**Add Plasma Maven Plugin**
+**Add CloudGraph Maven Plugin**
 ---------------------------
 
 Add the Plasma Maven Plugin with 3 executions which generate data access and
-query (DSL) classes as well as a schema for MySql. See below Plasma Maven Plugin
+query (DSL) classes as well as a schema for MySql. See below CloudGraph Maven Plugin
 Configuration for complete listing.
 
 See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
@@ -309,7 +308,7 @@ The generated data access source code should appear under
 target/generated-sources/quickstart.pojo.model which is the package we specified
 in \@NamespaceProvisioning on the namespace. Look in
 target/ddl/mysql-create.sql. Notice the OrgCat enumeration was used to generate
-a MySql check constraint in the HR.ORG table. Plasma supports full round-trip
+a MySql check constraint in the HR.ORG table. CloudGraph supports full round-trip
 engineering of enumerations across all metadata contexts.
 
 ```
@@ -397,13 +396,13 @@ import commonj.sdo.*;
 
 public class ExampleRunner {
 
-  public static PlasmaDataGraph runExample() throws IOException {
+  public static CloudGraphDataGraph runExample() throws IOException {
     SDODataAccessClient client = new SDODataAccessClient(new PojoDataAccessClient(
         DataAccessProviderName.JDBC));
 
-    DataGraph dataGraph = PlasmaDataFactory.INSTANCE.createDataGraph();
+    DataGraph dataGraph = CloudGraphDataFactory.INSTANCE.createDataGraph();
     dataGraph.getChangeSummary().beginLogging();
-    Type rootType = PlasmaTypeHelper.INSTANCE.getType(Organization.class);
+    Type rootType = CloudGraphTypeHelper.INSTANCE.getType(Organization.class);
     String randomSuffix = String.valueOf(System.nanoTime()).substring(10);
 
     Organization org = (Organization) dataGraph.createRootObject(rootType);
@@ -430,12 +429,12 @@ public class ExampleRunner {
     query.where(query.firstName().eq("Mark").and(query.lastName().like("Ham*")));
 
     DataGraph[] results = client.find(query);
-    return (PlasmaDataGraph) results[0];
+    return (CloudGraphDataGraph) results[0];
   }
 
   public static void main(String[] args) {
     try {
-      PlasmaDataGraph graph = runExample();
+      CloudGraphDataGraph graph = runExample();
       System.out.println(graph.asXml());
     } catch (IOException e) {
       e.printStackTrace();

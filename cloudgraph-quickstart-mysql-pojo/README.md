@@ -1,11 +1,10 @@
-﻿![icon](media/5cabe8ecef07e1b4c1f972e2fe29b2c8.png)
-**Plasma**
-========== 
+﻿<img src="media/b9e70b66a78db9c9c881976a6f21b06f.png" alt="big-icon" />
+
 TerraMeta Software, Inc.
 
-**Plasma Quick Start MySql (POJO)**
+**CloudGraph Quick Start MySql (POJO)**
 ===================================
-PlasmaSDO® and PlasmaQuery® are registered of Trademarks of TerraMeta Software, Inc.
+Cloudgraph<sup>®</sup>, PlasmaSDO<sup>®</sup> and PlasmaQuery<sup>®</sup> are registered of Trademarks of TerraMeta Software, Inc.
 
 **Introduction**
 ================
@@ -13,7 +12,7 @@ PlasmaSDO® and PlasmaQuery® are registered of Trademarks of TerraMeta Software
 This step-by-step guide uses only annotated Java (POJO) objects as the source of
 schema or metadata. It shows how to build a Maven project which generates a
 simple MySql data model with 2 tables which inserts, queries and prints test
-data from MySql. It requires basic knowledge of the Java programing language,
+data from MySql. It requires basic knowledge of the Java programming language,
 Apache Maven, MySql Server administration and assumes the following software
 install prerequisites.
 
@@ -22,12 +21,12 @@ install prerequisites.
 -   MySql Server 5.5 or Above
 
 See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
-examples which accomplany this guide.
+examples which accompany this guide.
 
-**Plasma Quick Start MySql (POJO)**
+**CloudGraph Quick Start MySql (POJO)**
 ===================================
 
-**Add Plasma Dependencies**
+**Add CloudGraph Dependencies**
 --------------------------------------
 
 Add the following dependency to your Maven project to get started.
@@ -200,15 +199,15 @@ import org.plasma.runtime.DataStoreType;
 
 Namespace 1 – package_info.java
 
-**Add Plasma Maven Plugin**
+**Add CloudGraph Maven Plugin**
 ---------------------------
 
 Add the Plasma Maven Plugin with 3 executions which generate data access and
-query (DSL) classes as well as a schema for MySql. See below Plasma Maven Plugin
+query (DSL) classes as well as a schema for MySql. See below CloudGraph Maven Plugin
 Configuration for complete listing.
 
 See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
-examples which accomplany this guide.
+examples which accompany this guide.
 
 **Generate Source and DDL**
 ---------------------------
@@ -221,7 +220,7 @@ The generated data access source code should appear under
 target/generated-sources/quickstart.pojo.model which is the package we specified
 in @NamespaceProvisioning on the namespace. Look in
 target/ddl/mysql-create.sql. Notice the OrgCat enumeration was used to generate
-a MySql check constraint in the HR.ORG table. Plasma supports full round-trip
+a MySql check constraint in the HR.ORG table. CloudGraph supports full round-trip
 engineering of enumerations across all metadata contexts.
 
 ```
@@ -279,7 +278,7 @@ the employer organization and then the parent organization. Then final y the
 example prints the serialized result graph as formatted XML for easy
 visualization and debugging. The final output should look like the below XML
 example. See <https://github.com/plasma-framework/plasma-examples-quickstart>
-for working examples which accomplany this guide.
+for working examples which accompany this guide.
 
 **Figure 3 – Result Graph, Serialized as XML**
 
@@ -309,13 +308,13 @@ import commonj.sdo.*;
 
 public class ExampleRunner {
 
-  public static PlasmaDataGraph runExample() throws IOException {
+  public static CloudGraphDataGraph runExample() throws IOException {
     SDODataAccessClient client = new SDODataAccessClient(new PojoDataAccessClient(
         DataAccessProviderName.JDBC));
 
-    DataGraph dataGraph = PlasmaDataFactory.INSTANCE.createDataGraph();
+    DataGraph dataGraph = CloudGraphDataFactory.INSTANCE.createDataGraph();
     dataGraph.getChangeSummary().beginLogging();
-    Type rootType = PlasmaTypeHelper.INSTANCE.getType(Organization.class);
+    Type rootType = CloudGraphTypeHelper.INSTANCE.getType(Organization.class);
     String randomSuffix = String.valueOf(System.nanoTime()).substring(10);
 
     Organization org = (Organization) dataGraph.createRootObject(rootType);
@@ -342,12 +341,12 @@ public class ExampleRunner {
     query.where(query.firstName().eq("Mark").and(query.lastName().like("Ham*")));
 
     DataGraph[] results = client.find(query);
-    return (PlasmaDataGraph) results[0];
+    return (CloudGraphDataGraph) results[0];
   }
 
   public static void main(String[] args) {
     try {
-      PlasmaDataGraph graph = runExample();
+      CloudGraphDataGraph graph = runExample();
       System.out.println(graph.asXml());
     } catch (IOException e) {
       e.printStackTrace();
@@ -358,7 +357,7 @@ public class ExampleRunner {
 ```
 
 See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
-examples which accomplany this guide.
+examples which accompany this guide.
 
 Plasma Maven Plugin Configuration
 =================================
@@ -366,7 +365,7 @@ Plasma Maven Plugin Configuration
 Below is the Maven plugin listing referenced about which is needed for
 generation of data access source code and DDL. See
 <https://github.com/plasma-framework/plasma-examples-quickstart> for working
-examples which accomplany this guide.
+examples which accompany this guide.
 
 ```xml
 <plugin>
