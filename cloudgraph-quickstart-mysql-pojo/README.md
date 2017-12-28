@@ -20,7 +20,8 @@ install prerequisites.
 -   Maven 3.x or Above
 -   MySql Server 5.5 or Above
 
-See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
+See
+<https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
 examples which accompany this guide.
 
 **CloudGraph Quick Start MySql (POJO)**
@@ -206,7 +207,8 @@ Add the Plasma Maven Plugin with 3 executions which generate data access and
 query (DSL) classes as well as a schema for MySql. See below CloudGraph Maven Plugin
 Configuration for complete listing.
 
-See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
+See
+<https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
 examples which accompany this guide.
 
 **Generate Source and DDL**
@@ -277,8 +279,9 @@ child) with a single employee under the child. The example then queries for the
 the employer organization and then the parent organization. Then final y the
 example prints the serialized result graph as formatted XML for easy
 visualization and debugging. The final output should look like the below XML
-example. See <https://github.com/plasma-framework/plasma-examples-quickstart>
-for working examples which accompany this guide.
+example. See
+<https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
+examples which accompany this guide.
 
 **Figure 3 – Result Graph, Serialized as XML**
 
@@ -356,7 +359,8 @@ public class ExampleRunner {
 
 ```
 
-See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
+See
+<https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
 examples which accompany this guide.
 
 Plasma Maven Plugin Configuration
@@ -364,7 +368,7 @@ Plasma Maven Plugin Configuration
 
 Below is the Maven plugin listing referenced about which is needed for
 generation of data access source code and DDL. See
-<https://github.com/plasma-framework/plasma-examples-quickstart> for working
+<https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
 examples which accompany this guide.
 
 ```xml

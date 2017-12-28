@@ -238,7 +238,9 @@ examples which accomplany this guide.
 
 After adding the plugin and 2 executions type:
 
-maven generate-sources
+```
+mvn generate-sources
+```
 
 The generated data access source code should appear under
 target/generated-sources/quickstart.pojo.model which is the package we specified

@@ -28,7 +28,7 @@ administration and assumes the following software install prerequisites.
 For more information on wide column stores, see
 <https://en.wikipedia.org/wiki/Wide_column_store>. See
 <https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
-examples which accomplany this guide.
+examples which accompany this guide.
 
 **CloudGraph HBase Easy Wide Rows**
 ===================================
@@ -266,11 +266,11 @@ an HBase data access service provider (CloudGraph HBase).
 And finally create a class as below which inserts a single Card with random card
 number and several child Transaction entities. This will result ina single
 (wide) HBase row. The example then queries for a “slice” of the transactions
-within a specific dollar amount range. Then finaly the example prints the
+within a specific dollar amount range. Then finally the example prints the
 serialized result graphs as formatted XML for easy visualization and debugging.
 The final output should look like the below XML example. See
 <https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
-examples which accomplany this guide.
+examples which accompany this guide.
 
 
 Figure 3 – Insert/Query HBase Data
@@ -374,16 +374,17 @@ Figure 4 – Result Graph, Serialized as XML
 
 ```
 
-See <https://github.com/plasma-framework/plasma-examples-quickstart> for working
-examples which accomplany this guide.
+See
+<https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
+examples which accompany this guide.
 
 Plasma Maven Plugin Configuration
 =================================
 
 Below is the Maven plugin listing referenced about which is needed for
 generation of data access source code and DDL. See
-<https://github.com/plasma-framework/plasma-examples-quickstart> for working
-examples which accomplany this guide.
+<https://github.com/cloudgraph/cloudgraph-examples-quickstart> for working
+examples which accompany this guide.
 
 ```xml
 <plugin>
